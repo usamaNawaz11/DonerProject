@@ -18,12 +18,13 @@ export const SimpleButton = ({
     return (
         <TouchableOpacity
             style={{
-                width:buttonWidth?buttonWidth:wp(81),
+                width:buttonWidth?buttonWidth:wp(90),
                 backgroundColor:backgroundColor?backgroundColor:Color.RED,
                 height:height?height:hp(6),
                 borderRadius:borderRadius?borderRadius:wp(2),
                 alignItems:"center",
-                justifyContent:"center"
+                justifyContent:"center",
+                alignSelf:"center"
             }}
             onPress={onPress}>
             {loading ?

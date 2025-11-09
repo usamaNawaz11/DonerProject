@@ -5,8 +5,10 @@ import { hp, wp } from '../../../../Component/ResponsiveComponent'
 import { ResponsiveText } from '../../../../Component/ResponsiveText'
 import InputText from '../../../../Component/InputText'
 import Spacer from '../../../../Component/Spacer'
+import DropDown from "../../../../Component/Dropdown"
+import { UniversityName } from "../../../../Dummy/Index"
 
-export const SignupForm = () => {
+export const SignupForm = ({ setDropDownOpen, selectedUniversity, setSelectedUniversity }) => {
     return (
         <View style={styles.Signuptainer}>
             <View>
@@ -28,12 +30,24 @@ export const SignupForm = () => {
             </View>
             <Spacer />
             <View>
+                <ResponsiveText style={styles.text2}>Select University</ResponsiveText>
+                <Spacer height={hp(1)} />
+                <DropDown
+                    setIsOpen={setDropDownOpen}
+                    placeholder={"Select University"}
+                    items={UniversityName}
+                    value={selectedUniversity}
+                    setValue={setSelectedUniversity}
+                />
+            </View>
+            <Spacer />
+            <View>
                 <ResponsiveText style={styles.text2}>Enter Password</ResponsiveText>
                 <Spacer height={hp(1)} />
                 <InputText placeholder={"Enter Password"} />
             </View>
-            <Spacer/>
-             <View>
+            <Spacer />
+            <View>
                 <ResponsiveText style={styles.text2}>Confirm Password</ResponsiveText>
                 <Spacer height={hp(1)} />
                 <InputText placeholder={"Confirm Password"} />
