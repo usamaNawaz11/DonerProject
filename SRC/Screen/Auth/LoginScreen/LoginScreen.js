@@ -24,8 +24,9 @@ const LoginScreen = (props) => {
         />
         <Spacer height={hp(5)} />
         {headerButtonPress === "student" ?
-          <StudentLoginForm 
-          SignupPress={()=>props?.navigation?.navigate(Route.SIGNUPSCREEN)}
+          <StudentLoginForm
+            SignupPress={() => props?.navigation?.navigate(Route.SIGNUPSCREEN)}
+            LoginPress={()=>props?.navigation?.navigate(Route.BOTTOMNAVIGATION,{screen:Route.PROFILESCREEN})}
           />
           :
           <UniversityLoginForm />

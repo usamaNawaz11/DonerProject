@@ -8,12 +8,6 @@ import SignupScreen from "../../Screen/Auth/SignupScreen/SignupScreen"
 const { Navigator, Screen } = createNativeStackNavigator();
 
 const AuthNavigation = (props) => {
-    // useEffect(() => {
-    //     if (Platform.OS === 'ios') {
-    //         props?.navigation?.navigate?.(Routes.splashScreen)
-    //     }
-    // }, [])
-
     return (
         <Navigator screenOptions={{ headerShown: false }}>
             <Screen name={Route.LOGINSCREEN} component={LoginScreen} />

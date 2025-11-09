@@ -5,15 +5,15 @@ import { wp, hp } from "./ResponsiveComponent"
 import { Color } from "../Theme/Color/Index"
 
 
-const DropDown = ({ 
-    items, 
-    value, 
-    setValue, 
-    placeholder, 
-    zIndex, 
-    setIsOpen, 
-    paddingVertical =hp(2),
-    backgroundColor=Color.WHITE
+const DropDown = ({
+    items,
+    value,
+    setValue,
+    placeholder,
+    zIndex,
+    setIsOpen,
+    paddingVertical = hp(2),
+    backgroundColor = Color.WHITE
 }) => {
     const [open, setOpen] = useState(false)
     console.log("value11111111", value);
@@ -28,14 +28,14 @@ const DropDown = ({
                 setIsOpen(openState) // Track the dropdown open state
             }}
             setValue={setValue}
-            style={[styles.dropdown, { zIndex: zIndex}]}  // Apply dynamic height here
+            style={[styles.dropdown, { zIndex: zIndex }]}  // Apply dynamic height here
             dropDownDirection="BOTTOM"
-            dropDownContainerStyle={[styles.dropdownContainer, {paddingVertical:paddingVertical }]} // Apply dynamic height to dropdown container
+            dropDownContainerStyle={[styles.dropdownContainer, { paddingVertical: paddingVertical }]} // Apply dynamic height to dropdown container
             textStyle={styles.dropdownText}
             placeholder={placeholder}
             listMode="SCROLLVIEW"
             arrowIconStyle={{ tintColor: Color.greeen3, marginRight: wp(2) }}
-            placeholderStyle={{backgroundColor:backgroundColor,color:Color.LIGHTGREY}}
+            placeholderStyle={{ backgroundColor: backgroundColor, color: Color.LIGHTGREY }}
         />
     )
 }
@@ -47,14 +47,17 @@ const styles = StyleSheet.create({
         borderColor: Color.LIGHTGREY,
         borderWidth: 1.5,
         borderRadius: wp(1.8),
-        width:wp(90),
-        alignSelf:"center"
+        width: wp(90),
+        alignSelf: "center"
     },
     dropdownContainer: {
         backgroundColor: Color.WHITE,
         borderColor: Color.LIGHTGREY,
         borderWidth: 1.5,
         borderRadius: wp(3),
+        width: wp(90),
+        alignSelf: "center"
+
     },
     dropdownText: {
         color: Color.BLACK,

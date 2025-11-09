@@ -8,8 +8,9 @@ import { SignupForm } from "./Component/Index"
 import { UseSignUpScreen } from "./Hooks/Index"
 import { SimpleButton } from '../../../Component/SimpleButton'
 import { Color } from '../../../Theme/Color/Index'
+import { Route } from '../../../Constant/Route'
 
-const SignupScreen = () => {
+const SignupScreen = (props) => {
     const { isDropDownOpen, setIsDropDownOpen, selectedUniversity, setSelectedUniversity } = UseSignUpScreen()
     return (
         <MainContainer>
@@ -27,6 +28,7 @@ const SignupScreen = () => {
                     <SimpleButton
                     textColor={Color.WHITE}
                     text={"SignUp"}
+                    onPress={()=>props?.navigation?.navigate(Route.LOGINSCREEN)}
                     />
                 </ScrollView>
             </View>

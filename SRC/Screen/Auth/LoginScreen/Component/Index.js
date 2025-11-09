@@ -55,7 +55,7 @@ export const HeaderButton = ({ headerPress, setHeaderPress }) => {
     );
 };
 
-export const StudentLoginForm = ({SignupPress}) => {
+export const StudentLoginForm = ({SignupPress,LoginPress}) => {
     return (
         <View style={styles.loginContainer}>
             <View>
@@ -78,6 +78,7 @@ export const StudentLoginForm = ({SignupPress}) => {
                     textColor={Color.WHITE}
                     text={"Login"}
                     buttonWidth={wp(90)}
+                    onPress={LoginPress}
                 />
                 <View style={{ flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
                     <ResponsiveText style={styles.text3}>Dont have an Account?</ResponsiveText>
