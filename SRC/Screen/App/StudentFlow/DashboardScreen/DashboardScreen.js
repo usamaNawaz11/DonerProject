@@ -4,8 +4,9 @@ import { MainContainer } from '../../../../Component/MainContainer'
 import { styles } from "./Style"
 import { Images } from '../../../../Assets/Index'
 import Spacer from '../../../../Component/Spacer'
-import { HeaderButton } from "./Component/Index"
+import { BloodRequest, HeaderButton, Redeem } from "./Component/Index"
 import { UseDashboard } from "./Hooks/Index"
+import { ResponsiveText } from '../../../../Component/ResponsiveText'
 
 const DashboardScreen = () => {
     const { headerButtonPress, setHeaderButtonPress } = UseDashboard()
@@ -19,6 +20,23 @@ const DashboardScreen = () => {
                     headerPress={headerButtonPress}
                     setHeaderPress={setHeaderButtonPress}
                 />
+                {headerButtonPress === "request" ?
+                    <View>
+                        <Spacer/>
+                        <ResponsiveText style={styles.test1}>Available Blood Request</ResponsiveText>
+                        <Spacer/>
+                        <BloodRequest/>
+                    </View>
+                    :
+                    
+                    <View>
+                        <Spacer/>
+                        <ResponsiveText style={styles.test1}>Redeem</ResponsiveText>
+                        <Spacer/>
+                        <Redeem/>
+                    </View>
+                    
+                }
             </View>
 
         </MainContainer>

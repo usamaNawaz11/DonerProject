@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 import {wp} from "../../../../Component/ResponsiveComponent"
+import { Color } from "../../../../Theme/Color/Index";
 
 export const styles = StyleSheet.create({
     container:{
@@ -11,5 +12,11 @@ export const styles = StyleSheet.create({
         height:wp(15),
         borderRadius:wp(7.5),
         resizeMode:"contain"
+    },
+    test1:{
+        fontSize:18,
+        color:Color.BLACK,
+        fontWeight:"600",
+        paddingHorizontal:wp(2)
     }
 });

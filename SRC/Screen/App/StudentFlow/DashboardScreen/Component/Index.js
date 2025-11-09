@@ -1,55 +1,109 @@
-import { StyleSheet, TouchableOpacity, View } from "react-native";
-import {Color} from "../../../../../Theme/Color/Index"
-import {ResponsiveText} from "../../../../../Component/ResponsiveText"
-import {wp} from "../../../../../Component/ResponsiveComponent"
+import { FlatList, StyleSheet, TouchableOpacity, View } from "react-native";
+import { Color } from "../../../../../Theme/Color/Index"
+import { ResponsiveText } from "../../../../../Component/ResponsiveText"
+import { hp, wp } from "../../../../../Component/ResponsiveComponent"
+import { DummyRequest, RedeemOption } from "../../../../../Dummy/Index";
+import Spacer from "../../../../../Component/Spacer";
 
 export const HeaderButton = ({ headerPress, setHeaderPress }) => {
     return (
         <View style={styles.headerView}>
             <TouchableOpacity
-                onPress={() => setHeaderPress('student')}
+                onPress={() => setHeaderPress('request')}
                 activeOpacity={0.8}
                 style={[
                     styles.button,
                     {
                         backgroundColor:
-                            headerPress === 'student' ? Color.RED : Color.WHITE,
+                            headerPress === 'request' ? Color.RED : Color.WHITE,
                     },
                 ]}
             >
                 <ResponsiveText
                     style={[
                         styles.text,
-                        { color: headerPress === 'student' ? Color.WHITE : Color.BLACK },
+                        { color: headerPress === 'request' ? Color.WHITE : Color.BLACK },
                     ]}
                 >
-                    Student
+                    Request
                 </ResponsiveText>
             </TouchableOpacity>
 
             <TouchableOpacity
-                onPress={() => setHeaderPress('university')}
+                onPress={() => setHeaderPress('redeem')}
                 activeOpacity={0.8}
                 style={[
                     styles.button,
                     {
                         backgroundColor:
-                            headerPress === 'university' ? Color.RED : Color.WHITE,
+                            headerPress === 'redeem' ? Color.RED : Color.WHITE,
                     },
                 ]}
             >
                 <ResponsiveText
                     style={[
                         styles.text,
-                        { color: headerPress === 'university' ? Color.WHITE : Color.BLACK },
+                        { color: headerPress === 'redeem' ? Color.WHITE : Color.BLACK },
                     ]}
                 >
-                    University
+                    Redeem
                 </ResponsiveText>
             </TouchableOpacity>
         </View>
     );
 };
+
+export const BloodRequest = () => {
+    return (
+        <View>
+            <FlatList
+                data={DummyRequest}
+                keyExtractor={(item, index) => item.id.toString()}
+                ItemSeparatorComponent={<Spacer height={hp(1)} />}
+                renderItem={({ item }) => {
+                    return (
+                        <View style={styles.view1}>
+                            <View>
+                                <ResponsiveText style={styles.tex2}>{item.universityName}</ResponsiveText>
+                                <Spacer height={hp(1)}/>
+                                <ResponsiveText style={styles.tex3}>{item.eventDate}</ResponsiveText>
+                            </View>
+                            <TouchableOpacity>
+                                <ResponsiveText style={[styles.tex3,{color:Color.RED}]}>Signup</ResponsiveText>
+                            </TouchableOpacity>
+                        </View>
+                    )
+                }}
+            />
+        </View>
+    )
+}
+
+export const Redeem = () => {
+    return (
+        <View>
+            <FlatList
+                data={RedeemOption}
+                keyExtractor={(item, index) => item.id.toString()}
+                ItemSeparatorComponent={<Spacer height={hp(1)} />}
+                renderItem={({ item }) => {
+                    return (
+                        <View style={styles.view1}>
+                            <View>
+                                <ResponsiveText style={styles.tex2}>{item.universityName}</ResponsiveText>
+                                <Spacer height={hp(1)}/>
+                                <ResponsiveText style={styles.tex3}>{item.redeemItem}</ResponsiveText>
+                            </View>
+                            <TouchableOpacity>
+                                <ResponsiveText style={[styles.tex3,{color:Color.RED}]}>Redeem</ResponsiveText>
+                            </TouchableOpacity>
+                        </View>
+                    )
+                }}
+            />
+        </View>
+    )
+}
 const styles = StyleSheet.create({
     headerView: {
         width: wp(90),
@@ -72,19 +126,28 @@ const styles = StyleSheet.create({
         fontWeight: '500',
         textAlign: 'center',
     },
-    loginContainer: {
-        // flex: 1,
-        justifyContent: "center",
-    },
-    text2: {
-        fontSize: 14,
-        fontWeight: "400",
-        color: Color.BLACK,
-        paddingHorizontal: wp(2)
-    },
-    text3: {
-        fontSize: 14,
-        fontWeight: "400",
+    tex2: {
+        fontSize: 15,
+        fontWeight: '500',
+        textAlign: 'center',
         color: Color.BLACK
+    },
+    tex3: {
+        fontSize: 14,
+        fontWeight: '500',
+        color: Color.LIGHTGREY
+    },
+    view1: {
+        width: wp(90),
+        borderWidth: 1,
+        borderColor: Color.LIGHTGREY,
+        borderRadius: wp(3),
+        justifyContent: "space-between",
+        flexDirection: "row",
+        alignItems: "center",
+        padding: wp(3)
     }
+
+
+
 });

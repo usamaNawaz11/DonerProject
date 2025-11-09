@@ -4,7 +4,7 @@ import { MainContainer } from '../../../../Component/MainContainer'
 import { styles } from "./Style"
 import { ResponsiveText } from '../../../../Component/ResponsiveText'
 import Spacer from '../../../../Component/Spacer'
-import { BoxView } from "./Component/Index"
+import { BoxView, EventHistory } from "./Component/Index"
 import { SimpleButton } from '../../../../Component/SimpleButton'
 import { wp } from '../../../../Component/ResponsiveComponent'
 import { Color } from '../../../../Theme/Color/Index'
@@ -21,6 +21,8 @@ const ProfileScreen = (props) => {
                 </ResponsiveText>
                 <Spacer />
                 <BoxView />
+                <Spacer/>
+                <EventHistory/>
                 <Spacer/>
                 <View style={styles.view1}>
                     <SimpleButton
