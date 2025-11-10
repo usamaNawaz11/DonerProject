@@ -26,7 +26,7 @@ const DashboardScreen = (props) => {
                         <Spacer />
                         <ResponsiveText style={styles.test1}>Available Blood Request</ResponsiveText>
                         <Spacer />
-                        <BloodRequest onpress={() => props?.navigation?.navigate(Route.STUDENTNAVIGATION,{screen:Route.STUDENTEVENTSIGNUPSCREEN})} />
+                        <BloodRequest onpress={() => props?.navigation?.navigate(Route.STACKNAVIGATION,{screen:Route.STUDENTEVENTSIGNUPSCREEN})} />
                     </View>
                     :
 

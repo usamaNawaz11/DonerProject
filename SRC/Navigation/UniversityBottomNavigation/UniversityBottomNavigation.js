@@ -5,6 +5,8 @@ import { Color } from "../../Theme/Color/Index";
 import { Route } from "../../Constant/Route";
 import UniversityDashboardScreen from '../../Screen/App/UniversityFlow/UniversityDashboardScreen/UniversityDashboardScreen';
 import UniversityRewardScreen from '../../Screen/App/UniversityFlow/UniversityRewardScreen/UniversityRewardScreen';
+import UniversityReportScren from '../../Screen/App/UniversityFlow/UniverityReportScreen/UniversityReportScren';
+
 import { Images } from "../../Assets/Index";
 import { hp, wp } from "../../Component/ResponsiveComponent";
 import Spacer from '../../Component/Spacer';
@@ -61,6 +63,33 @@ const UniversityBottomNavigation = () => {
             <Screen
                 name={Route.UNIVERSITYREWARDSCREEEN}
                 component={UniversityRewardScreen}
+                options={{
+                    tabBarButton: (props) => (
+                        <TouchableOpacity
+                            {...props}
+                            activeOpacity={1}
+                            style={styles.tabButton}
+                        />
+                    ),
+                    tabBarIcon: ({ focused }) => (
+                        <View style={styles.iconContainer}>
+                            <Image
+                                source={Images.profileIcon}
+                                style={[
+                                    styles.iconSize,
+                                    { tintColor: focused ? Color.RED : Color.LIGHTGREY },
+                                ]}
+                                resizeMode="contain"
+                            />
+                            <Spacer height={hp(0.7)} />
+                        </View>
+                    ),
+                    tabBarLabel: '',
+                }}
+            />
+             <Screen
+                name={Route.UNIVERSITYREPORTSCREEEN}
+                component={UniversityReportScren}
                 options={{
                     tabBarButton: (props) => (
                         <TouchableOpacity

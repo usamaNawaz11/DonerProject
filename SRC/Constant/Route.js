@@ -13,11 +13,13 @@ export const Route = {
     //UniversityFlow
     UNIVERSITYDASHBOARDSCREEN: "UniversityDashboardScreen",
     UNIVERSITYREWARDSCREEEN: "UniversityRewardScreen",
+    UNIVERSITYREPORTSCREEEN: "UniversityReportScreen",
+    UNIVERSITYCREATEEVENTSCREEEN: "UniversityCreateEventScreen",
 
 
     //Navigation
     AUTHNAVIGATION: "AuthNavigation",
-    STUDENTNAVIGATION: "StudentNavigation",
+    STACKNAVIGATION: "StacktNavigation",
     BOTTOMNAVIGATION: "BottomNavigation",
     UNIVERSITYBOTTOMNAVIGATION: "UniversityBottomNavigation"
 
