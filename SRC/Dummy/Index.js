@@ -51,6 +51,87 @@ export const RedeemOption = [
         // endTime: "12:00 Pm",
         redeemItem: "2CR"
     },
-    
+
+
+]
+
+export const DummyEvent = [
+    {
+        id: 1,
+        eventName: "the donor event",
+
+    },
+    {
+        id: 2,
+        eventName: "the Blood Donor event",
+
+    },
+    {
+        id: 3,
+        eventName: "the A+ Blood Donor event",
+
+    },
+
+
+]
+
+export const DonorList = [
+    {
+        id: 1,
+        Name: "Salman",
+        age: 24,
+        BloodGroup: "A+",
+        id: "123",
+
+    },
+    {
+        id: 2,
+        Name: "Usama",
+        age: 24,
+        BloodGroup: "B+",
+        id: "133",
+
+
+    },
+
+    {
+        id: 3,
+        Name: "Raid",
+        age: 24,
+        BloodGroup: "A+",
+        id: "145",
+
+
+    },
+
+
+
+]
+
+export const RequestRewards = [
+    {
+        id: 1,
+        Name: "Salman",
+        RewardType: "Free Cofee",
+        Active: "Taken"
+
+    },
+    {
+        id: 2,
+        Name: "Usama",
+        RewardType: "Free Burgere",
+        Active: "Taken"
+
+    },
+
+    {
+        id: 3,
+        Name: "Raid",
+        RewardType: "Free Chips",
+        Active: "Not Taken"
+
+    },
+
+
 
 ]

@@ -29,7 +29,9 @@ const LoginScreen = (props) => {
             LoginPress={()=>props?.navigation?.navigate(Route.BOTTOMNAVIGATION,{screen:Route.PROFILESCREEN})}
           />
           :
-          <UniversityLoginForm />
+          <UniversityLoginForm 
+          UniversityPress={()=>props?.navigation?.navigate(Route.UNIVERSITYBOTTOMNAVIGATION,{screen:Route.UNIVERSITYDASHBOARDSCREEN})}
+          />
         }
       </View>
     </MainContainer>

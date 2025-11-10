@@ -12,6 +12,7 @@ export const Route = {
 
     //UniversityFlow
     UNIVERSITYDASHBOARDSCREEN: "UniversityDashboardScreen",
+    UNIVERSITYREWARDSCREEEN: "UniversityRewardScreen",
 
 
     //Navigation

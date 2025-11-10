@@ -3,8 +3,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Image, StyleSheet, TouchableOpacity, View } from 'react-native';
 import { Color } from "../../Theme/Color/Index";
 import { Route } from "../../Constant/Route";
-import DashboardScreen from '../../Screen/App/StudentFlow/DashboardScreen/DashboardScreen';
-import ProfileScreen from '../../Screen/App/StudentFlow/ProfileScreen/ProfileScreen';
+import UniversityDashboardScreen from '../../Screen/App/UniversityFlow/UniversityDashboardScreen/UniversityDashboardScreen';
+import UniversityRewardScreen from '../../Screen/App/UniversityFlow/UniversityRewardScreen/UniversityRewardScreen';
 import { Images } from "../../Assets/Index";
 import { hp, wp } from "../../Component/ResponsiveComponent";
 import Spacer from '../../Component/Spacer';
@@ -31,8 +31,8 @@ const UniversityBottomNavigation = () => {
             }}
         >
             <Screen
-                name={Route.DASHBOARDSCREEN}
-                component={DashboardScreen}
+                name={Route.UNIVERSITYDASHBOARDSCREEN}
+                component={UniversityDashboardScreen}
                 options={{
                     tabBarButton: (props) => (
                         <TouchableOpacity
@@ -59,8 +59,8 @@ const UniversityBottomNavigation = () => {
             />
 
             <Screen
-                name={Route.PROFILESCREEN}
-                component={ProfileScreen}
+                name={Route.UNIVERSITYREWARDSCREEEN}
+                component={UniversityRewardScreen}
                 options={{
                     tabBarButton: (props) => (
                         <TouchableOpacity

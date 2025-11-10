@@ -91,7 +91,7 @@ export const StudentLoginForm = ({SignupPress,LoginPress}) => {
         </View>
     );
 };
-export const UniversityLoginForm = () => {
+export const UniversityLoginForm = ({UniversityPress}) => {
     return (
         <View style={styles.loginContainer}>
             <View>
@@ -111,6 +111,7 @@ export const UniversityLoginForm = () => {
                     textColor={Color.WHITE}
                     text={"Login"}
                     buttonWidth={wp(90)}
+                    onPress={UniversityPress}
                 />
                
             </View>
