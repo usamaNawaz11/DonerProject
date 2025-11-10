@@ -53,7 +53,7 @@ export const HeaderButton = ({ headerPress, setHeaderPress }) => {
     );
 };
 
-export const BloodRequest = () => {
+export const BloodRequest = ({onpress}) => {
     return (
         <View>
             <FlatList
@@ -68,7 +68,7 @@ export const BloodRequest = () => {
                                 <Spacer height={hp(1)}/>
                                 <ResponsiveText style={styles.tex3}>{item.eventDate}</ResponsiveText>
                             </View>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={onpress}>
                                 <ResponsiveText style={[styles.tex3,{color:Color.RED}]}>Signup</ResponsiveText>
                             </TouchableOpacity>
                         </View>

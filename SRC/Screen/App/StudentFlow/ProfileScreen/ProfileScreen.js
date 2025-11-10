@@ -35,7 +35,7 @@ const ProfileScreen = (props) => {
                         buttonWidth={wp(45)} />
                 </View>
                 <Spacer/>
-                <TouchableOpacity onPress={()=>props?.navigation?.navigate(Route.STUDENTVERIFICATIONSCREEN)}>
+                <TouchableOpacity onPress={()=>props?.navigation?.navigate(Route.STUDENTNAVIGATION,{screen:Route.STUDENTVERIFICATIONSCREEN})}>
                 <ResponsiveText style={styles.text2}>Verify Status?</ResponsiveText>
                 </TouchableOpacity>
             </View>

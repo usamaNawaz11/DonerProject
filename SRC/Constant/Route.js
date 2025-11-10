@@ -1,17 +1,24 @@
 export const Route = {
-    LOGINSCREEN:"LoginScreen",
-    SIGNUPSCREEN:"SignupScreen",
+    LOGINSCREEN: "LoginScreen",
+    SIGNUPSCREEN: "SignupScreen",
 
     //StudentFlow
-    DASHBOARDSCREEN:"DashboardScreen",
-    PROFILESCREEN:"ProfileScreen",
-    SIGNUPEVENTSCREEN:"SignupEventScreen",
-    STUDENTVERIFICATIONSCREEN:"StudentVerificationScreen",
+    DASHBOARDSCREEN: "DashboardScreen",
+    PROFILESCREEN: "ProfileScreen",
+    SIGNUPEVENTSCREEN: "SignupEventScreen",
+    STUDENTVERIFICATIONSCREEN: "StudentVerificationScreen",
+    STUDENTEVENTSIGNUPSCREEN: "StudentSignupScreen",
+
+
+    //UniversityFlow
+    UNIVERSITYDASHBOARDSCREEN: "UniversityDashboardScreen",
 
 
     //Navigation
-    AUTHNAVIGATION:"AuthNavigation",
-    STUDENTNAVIGATION:"StudentNavigation",
-    BOTTOMNAVIGATION:"BottomNavigation"
+    AUTHNAVIGATION: "AuthNavigation",
+    STUDENTNAVIGATION: "StudentNavigation",
+    BOTTOMNAVIGATION: "BottomNavigation",
+    UNIVERSITYBOTTOMNAVIGATION: "UniversityBottomNavigation"
+
 
 }

@@ -7,8 +7,9 @@ import Spacer from '../../../../Component/Spacer'
 import { BloodRequest, HeaderButton, Redeem } from "./Component/Index"
 import { UseDashboard } from "./Hooks/Index"
 import { ResponsiveText } from '../../../../Component/ResponsiveText'
+import { Route } from '../../../../Constant/Route'
 
-const DashboardScreen = () => {
+const DashboardScreen = (props) => {
     const { headerButtonPress, setHeaderButtonPress } = UseDashboard()
     return (
         <MainContainer>
@@ -22,20 +23,20 @@ const DashboardScreen = () => {
                 />
                 {headerButtonPress === "request" ?
                     <View>
-                        <Spacer/>
+                        <Spacer />
                         <ResponsiveText style={styles.test1}>Available Blood Request</ResponsiveText>
-                        <Spacer/>
-                        <BloodRequest/>
+                        <Spacer />
+                        <BloodRequest onpress={() => props?.navigation?.navigate(Route.STUDENTNAVIGATION,{screen:Route.STUDENTEVENTSIGNUPSCREEN})} />
                     </View>
                     :
-                    
+
                     <View>
-                        <Spacer/>
+                        <Spacer />
                         <ResponsiveText style={styles.test1}>Redeem</ResponsiveText>
-                        <Spacer/>
-                        <Redeem/>
+                        <Spacer />
+                        <Redeem />
                     </View>
-                    
+
                 }
             </View>
 
