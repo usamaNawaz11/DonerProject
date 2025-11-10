@@ -74,7 +74,7 @@ const UniversityBottomNavigation = () => {
                     tabBarIcon: ({ focused }) => (
                         <View style={styles.iconContainer}>
                             <Image
-                                source={Images.profileIcon}
+                                source={Images.RewardIcon}
                                 style={[
                                     styles.iconSize,
                                     { tintColor: focused ? Color.RED : Color.LIGHTGREY },
@@ -101,7 +101,7 @@ const UniversityBottomNavigation = () => {
                     tabBarIcon: ({ focused }) => (
                         <View style={styles.iconContainer}>
                             <Image
-                                source={Images.profileIcon}
+                                source={Images.ReportIcon}
                                 style={[
                                     styles.iconSize,
                                     { tintColor: focused ? Color.RED : Color.LIGHTGREY },
